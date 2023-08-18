@@ -41,3 +41,18 @@ Lets take a look inside the src folder
 npx sequelize init
 ```` 
 -By executiong above command , you will get seeder, migration and config.json file and folder.
+
+then config the db detials in confiog json and run command
+```
+npx sequelize db:create
+```
+
+and if there is any model , migration , then just use migrate command else create new model and then migrte
+
+
+## DB Design
+
+--Airplane table
+--Flight Table
+--Airport Table 
+--City
