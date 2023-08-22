@@ -55,4 +55,14 @@ and if there is any model , migration , then just use migrate command else creat
 --Airplane table
 --Flight Table
 --Airport Table 
---City
+--City  Table
+
+### City -> id, name, created_at, updated_at
+### Airport->id, name address, city_id,created_at,updated_at
+    relationship -> city has many airports and  Airport belongs to city(one to many)
+
+
+--> for seeders use commands
+```
+npx sequelize seed:generate --name {name}
+```
