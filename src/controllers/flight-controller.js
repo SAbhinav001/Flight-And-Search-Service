@@ -4,7 +4,17 @@ const flightService = new FlightService()
 
 const create = async(req,res)=>{
     try{
-        const flight = await flightService.createFlight(req.body)
+        //we need to only send specific data to service layer not all
+        let flightRequestData = {
+                flightNumber: req.body.flightNumber,
+                airplaneId : req.body.airplaneId,
+                departureAirportId: req.body.departureAirportId,
+                arrivalAirportId: req.body.arrivalAirportId,
+                arrivalTime: req.body.arrivalTime,
+                departureTime: req.body.departureTime,
+                price: req.body.price
+        }
+        const flight = await flightService.createFlight(flightRequestData)
         return res.status(201).json({
             success:true,
             message:"successfully created the flight",
