@@ -58,12 +58,3 @@ class FlightRepository {
 
 module.exports = FlightRepository;
 
-
-/**
- *   where:{
- *          arriavlAirportId: 2.
- *             departureAirportId: 4,
- *          price : {[op.gte]: 4000}
- * 
- * }
- */
