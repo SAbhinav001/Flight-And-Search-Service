@@ -8,7 +8,7 @@ const db = require("./models")
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended:true}))
 
-app.use('/api', ApiRoutes)
+app.use('/flightsearchservice/api', ApiRoutes)
 
 app.listen(ServerConfig.PORT , async()=>{
     console.log(`server started at port ${ServerConfig.PORT}`)
