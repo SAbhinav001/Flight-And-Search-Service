@@ -11,7 +11,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use("/flightsearchservice/api", ApiRoutes);
 
 app.listen(ServerConfig.PORT, async () => {
-  console.log(`server started at port ${ServerConfig.PORT}`);
+  console.log(`server started at ports ${ServerConfig.PORT}`);
 
   //DO the sync once after creating model and association
   //first add env var.
